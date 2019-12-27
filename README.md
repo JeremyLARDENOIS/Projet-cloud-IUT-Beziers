@@ -6,14 +6,28 @@
 
 ## Pré-requis (connaissance) :
 
- - [ ] Disposer d'un serveur
- - [ ] Avoir un serveur Web avec PHP installé dessus (ici Apache2),  ainsi qu'une base de données (ici mysql).
- - [ ] Savoir ajouter une tâche CRON
+ - [x] Avoir un serveur Web avec PHP installé dessus (ici Apache2),  ainsi qu'une base de données (ici mysql).
+ - [x] Savoir ajouter une tâche CRON
  - [ ] Savoir installer et activer des modules php et apache. Savoir créer une base de données MySQL.
- - [ ] Avoir un PC client avec un navigateur web et un client SSH.
- - [ ] Disposer des droits d'administration sur le serveur.
- - [ ] Disposer d'une connexion à Internet configurée et activée.
- - [ ] Savoir utiliser le terminal
+ - [x] Avoir un PC client avec un navigateur web et un client SSH.
+ - [x] Disposer des droits d'administration sur le serveur.
+ - [x] Disposer d'une connexion à Internet configurée et activée.
+ - [x] Savoir utiliser le terminal
+
+## Installation de la base de donnée NoSQL MongoDB
+
+source : [https://doc.ubuntu-fr.org/mongodb](https://doc.ubuntu-fr.org/mongodb)
+
+Pour installer MongoDB il suffit d'utiliser les commandes ci-dessous:
+```bash=
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 68818C72E52529D4
+sudo echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+- [ ] Pas d'interferance avec apache ?
+- [ ] Regarder comment utiliser mongodb
+- [ ] Regarder robomongo pour interface graphique
 
 ## Installation du serveur Nextcloud
 Afin d'installer les paquets necessaires au bon fonctionnement de NextCloud on utilise la commande 
@@ -22,6 +36,8 @@ sudo apt install apache2
 ```
 
 Une fois tous les paquets nécessaires installés, on installe NextCloud :
+
+**A completer...**
 
 ```bash=
 curl https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip 
