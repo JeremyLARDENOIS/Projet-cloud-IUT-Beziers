@@ -1,9 +1,11 @@
+
 # Documentation nextcloud
 
 ## Sommaire
 - [Sources](#sources)
 - [Pré-requis (connaissance)](#prerequis)
-- [Installation de la base de donnée embarqué sqlite3](#sqlite3)
+- [Installation de la base de donnée embarqué sqlite3](#installsqlite3)
+- [Utiliser sqlite3 avec python3](#usesqlite3)
 - [Installation de la base de donnée NoSQL MongoDB](#mongodb)
 - [Installation du serveur Nextcloud](#installnextcloud)
 
@@ -26,7 +28,7 @@
  - [x] Disposer d'une connexion à Internet configurée et activée.
  - [x] Savoir utiliser le terminal
 
-<span id=sqlite3></span> 
+<span id=installsqlite3></span> 
 ## Installation de la base de donnée embarqué sqlite3
 source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite)
 
@@ -41,6 +43,34 @@ sqlite3
 ```
 
 Pour quitter, il faut taper .quit
+
+<span id=usesqlite3></span> 
+## Utiliser sqlite3 avec python3
+source : [https://docs.python.org/2/library/sqlite3.html](https://docs.python.org/2/library/sqlite3.html)
+
+Afin de se connecter et de stocker dans un fichier, on peut utiliser la commande
+```python=
+import sqlite3
+conn = sqlite3.connect('example.db')
+```
+Maintenant que nous sommes connectés, on peut utiliser les commandes SQL de la maniere suivante :
+```python=
+c = conn.cursor()
+
+# Create table
+c.execute('''CREATE TABLE stocks
+ (date text, trans text, symbol text, qty real, price real)''')
+
+# Insert a row of data
+c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+
+# Save (commit) the changes
+conn.commit()
+
+# We can also close the connection if we are done with it.
+# Just be sure any changes have been committed or they will be lost.
+conn.close()
+```
 
 <span id=mongodb></span> 
 ## Installation de la base de donnée NoSQL MongoDB
