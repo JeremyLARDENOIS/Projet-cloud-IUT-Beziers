@@ -22,9 +22,9 @@
 <span id=prerequis></span> 
 ## Pré-requis (connaissance) :
 
- - [x] Avoir un serveur Web avec PHP installé dessus (ici Apache2),  ainsi qu'une base de données (ici mysql).
+ - [x] Avoir un serveur Web avec PHP installé dessus (ici Apache2), ainsi qu'une base de données (ici sqlite).
  - [x] Savoir ajouter une tâche CRON
- - [ ] Savoir installer et activer des modules php et apache. Savoir créer une base de données MySQL.
+ - [ ] Savoir installer et activer des modules php et apache. Savoir créer une base de données sqlite3.
  - [x] Avoir un PC client avec un navigateur web et un client SSH.
  - [x] Disposer des droits d'administration sur le serveur.
  - [x] Disposer d'une connexion à Internet configurée et activée.
@@ -35,7 +35,7 @@
 source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite)
 doc : [http://www.leppf.com/v02/spip.php?article90](http://www.leppf.com/v02/spip.php?article90)
 
-Pour installer la base de donéee sqlite3, il suffit de taper la commande:
+Pour installer la base de donée sqlite3, il suffit de taper la commande:
 ```bash=
 sudo apt install sqlite3
 ```
@@ -51,7 +51,7 @@ Pour quitter, il faut taper .quit
 ## Utiliser sqlite3 avec python3
 source : [https://docs.python.org/2/library/sqlite3.html](https://docs.python.org/2/library/sqlite3.html)
 
-Afin de se connecter et de stocker dans un fichier, on peut utiliser la commande
+Afin de se connecter et de stocker dans un fichier, on peut utiliser la commande :
 ```python=
 import sqlite3
 conn = sqlite3.connect('example.db')
@@ -93,7 +93,7 @@ sudo apt-get install -y mongodb-org
 
 <span id=installnextcloud></span> 
 ## Installation du serveur Nextcloud
-Afin d'installer les paquets necessaires au bon fonctionnement de NextCloud on utilise la commande 
+Afin d'installer les paquets nécessaires au bon fonctionnement de NextCloud on utilise la commande 
 ```bash=
 sudo apt install apache2 
 ```
@@ -107,12 +107,11 @@ curl https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip
 ```
 ### Installation des modules PHP manquant
 
-La page d'installation indique qu'il manque des modules PHP. Connectez vous en SSH  avec les  droits d'administration  sur votre serveur, puis  
-installez ces paquets ip:
+La page d'installation indique qu'il manque des modules PHP. Connectez vous en SSH  avec les  droits d'administration  sur votre serveur, puis installez ces paquets ip :
 ```bash=
  $ apt install php-zip php-gd php-curl
 ```
-Les installer ne suffit pas, il faut les activer, et redémarrer le serveur web pour que ceux ci soient pris en compte :
+Les installer ne suffit pas. Il faut les activer, et redémarrer le serveur web pour que ceux-ci soient pris en compte :
 ```bash=
  $ phpenmod zip gd curl
 ```
