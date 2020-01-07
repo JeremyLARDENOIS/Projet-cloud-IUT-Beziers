@@ -31,6 +31,7 @@
 <span id=installsqlite3></span> 
 ## Installation de la base de donnée embarqué sqlite3
 source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite)
+doc : [http://www.leppf.com/v02/spip.php?article90](http://www.leppf.com/v02/spip.php?article90)
 
 Pour installer la base de donéee sqlite3, il suffit de taper la commande:
 ```bash=
