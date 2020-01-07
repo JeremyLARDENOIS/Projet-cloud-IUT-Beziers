@@ -87,9 +87,6 @@ sudo echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multive
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
-- [ ] Pas d'interferance avec apache ?
-- [ ] Regarder comment utiliser mongodb
-- [ ] Regarder robomongo pour interface graphique
 
 <span id=installnextcloud></span> 
 ## Installation du serveur Nextcloud
