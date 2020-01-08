@@ -1,22 +1,25 @@
 
+
 # Documentation nextcloud
 
 ## Sommaire
 - [Sources](#sources)
 - [Pré-requis (connaissance)](#prerequis)
-- [Installation de la base de donnée embarqué sqlite3](#installsqlite3)
+- [Installation de la base de données embarqué sqlite3](#installsqlite3)
 - [Utiliser sqlite3 avec python3](#usesqlite3)
-- [Installation de la base de donnée NoSQL MongoDB](#mongodb)
+- [Installation de la base de données NoSQL MongoDB](#mongodb)
 - [Installation du serveur Nextcloud](#installnextcloud)
 
 <!-- Pour  ajouter un label utiliser un <span id=label></span>
  ---> 
+ <!-- Vous pouvez rajouter ?target=_blank a la fin de l'URL pour l'ouvrir dans un nouvel onglet
+ --->
 
 <span id=sources></span> 
 ## Sources
-[https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https](https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https)
+[https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https](https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https?target=_blank)
 
-[https://doc.ubuntu-fr.org/nextcloud-serveur](https://doc.ubuntu-fr.org/nextcloud-serveur)
+[https://doc.ubuntu-fr.org/nextcloud-serveur](https://doc.ubuntu-fr.org/nextcloud-serveur?target=_blank)
 *Ce qui suit est un résumé de la documentation du lien ci-dessus*
 
 <span id=prerequis></span> 
@@ -31,11 +34,11 @@
  - [x] Savoir utiliser le terminal
 
 <span id=installsqlite3></span> 
-## Installation de la base de donnée embarqué sqlite3
-source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite)
-doc : [http://www.leppf.com/v02/spip.php?article90](http://www.leppf.com/v02/spip.php?article90)
+## Installation de la base de données embarqué sqlite3
+source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite?target=_blank)
+doc : [http://www.leppf.com/v02/spip.php?article90](http://www.leppf.com/v02/spip.php?article90?target=_blank)
 
-Pour installer la base de donée sqlite3, il suffit de taper la commande:
+Pour installer la base de données sqlite3, il suffit de taper la commande:
 ```bash=
 sudo apt install sqlite3
 ```
@@ -49,7 +52,7 @@ Pour quitter, il faut taper .quit
 
 <span id=usesqlite3></span> 
 ## Utiliser sqlite3 avec python3
-source : [https://docs.python.org/2/library/sqlite3.html](https://docs.python.org/2/library/sqlite3.html)
+source : [https://docs.python.org/2/library/sqlite3.html](https://docs.python.org/2/library/sqlite3.html?target=_blank)
 
 Afin de se connecter et de stocker dans un fichier, on peut utiliser la commande :
 ```python=
@@ -76,9 +79,9 @@ conn.close()
 ```
 
 <span id=mongodb></span> 
-## Installation de la base de donnée NoSQL MongoDB
+## Installation de la base de données NoSQL MongoDB
 
-source : [https://doc.ubuntu-fr.org/mongodb](https://doc.ubuntu-fr.org/mongodb)
+source : [https://doc.ubuntu-fr.org/mongodb](https://doc.ubuntu-fr.org/mongodb?target=_blank)
 
 Pour installer MongoDB il suffit d'utiliser les commandes ci-dessous:
 ```bash=
@@ -97,10 +100,9 @@ sudo apt install apache2
 
 Une fois tous les paquets nécessaires installés, on installe NextCloud :
 
-**A completer...**
-
 ```bash=
-curl https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip 
+wget https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip
+unzip nextcloud-12.0.4.zip -d /var/www/html 
 ```
 ### Installation des modules PHP manquant
 
