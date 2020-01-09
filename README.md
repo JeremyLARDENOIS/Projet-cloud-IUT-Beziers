@@ -1,5 +1,6 @@
 
 
+
 # Documentation nextcloud
 
 ## Sommaire
@@ -13,13 +14,14 @@
 <!-- Pour  ajouter un label utiliser un <span id=label></span>
  ---> 
  <!-- Vous pouvez rajouter ?target=_blank a la fin de l'URL pour l'ouvrir dans un nouvel onglet
+ ou alors le mettre comme en html
+ <a href="" target="_blank">  </a>
  --->
 
 <span id=sources></span> 
 ## Sources
-[https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https](https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https?target=_blank)
-
-[https://doc.ubuntu-fr.org/nextcloud-serveur](https://doc.ubuntu-fr.org/nextcloud-serveur?target=_blank)
+<a href="https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https" target="_blank"> https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https </a>
+<a href="https://doc.ubuntu-fr.org/nextcloud-serveur" target="_blank"> https://doc.ubuntu-fr.org/nextcloud-serveur </a>
 *Ce qui suit est un résumé de la documentation du lien ci-dessus*
 
 <span id=prerequis></span> 
@@ -35,8 +37,8 @@
 
 <span id=installsqlite3></span> 
 ## Installation de la base de données embarqué sqlite3
-source : [https://doc.ubuntu-fr.org/sqlite](https://doc.ubuntu-fr.org/sqlite?target=_blank)
-doc : [http://www.leppf.com/v02/spip.php?article90](http://www.leppf.com/v02/spip.php?article90?target=_blank)
+source : <a href="https://doc.ubuntu-fr.org/sqlite" target="_blank"> https://doc.ubuntu-fr.org/sqlite </a>
+doc :  <a href="http://www.leppf.com/v02/spip.php?article90" target="_blank"> http://www.leppf.com/v02/spip.php?article90 </a>
 
 Pour installer la base de données sqlite3, il suffit de taper la commande:
 ```bash=
@@ -52,7 +54,8 @@ Pour quitter, il faut taper .quit
 
 <span id=usesqlite3></span> 
 ## Utiliser sqlite3 avec python3
-source : [https://docs.python.org/2/library/sqlite3.html](https://docs.python.org/2/library/sqlite3.html?target=_blank)
+source : 
+<a href="https://docs.python.org/2/library/sqlite3.html" target="_blank"> https://docs.python.org/2/library/sqlite3.html </a>
 
 Afin de se connecter et de stocker dans un fichier, on peut utiliser la commande :
 ```python=
@@ -103,6 +106,10 @@ Une fois tous les paquets nécessaires installés, on installe NextCloud :
 ```bash=
 wget https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip
 unzip nextcloud-12.0.4.zip -d /var/www/html 
+```
+Et il ne faut pas oublier de donné les droits a apache2 :
+```bash=
+chown -R www-data:www-data /var/www/nextcloud
 ```
 ### Installation des modules PHP manquant
 
