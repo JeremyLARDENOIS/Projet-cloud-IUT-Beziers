@@ -124,10 +124,12 @@ service apache2 restart
 <span id=fastinstallnextcloud></span> 
 Pour aller plus vite, on peut lancer la suite de commande suivante :
 ```bash
-sudo apt install unzip sqlite3 apache2 php php-zip php-dom php-curl php-gd php-mbstring php-sqlite3
+sudo apt install unzip sqlite3 apache2 php php-zip php-dom php-curl php-gd php-mbstring php-sqlite3 php-ldap
 phpenmod zip dom curl gd mbstring sqlite3
 wget https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip
 unzip nextcloud-17.0.2.zip -d /var/www/html 
 chown -R www-data:www-data /var/www/html/nextcloud
 service apache2 restart
 ```
+
+pensez à changer l'ip dans le fichier /var/www/html/nextcloud/config/config.php
