@@ -1,0 +1,28 @@
+# Modules
+
+## Installation des modules : 
+
+Lorsque l'on est sur la page d'acceuil de Nextcloud, il faut cliquer sur l'icône de l'utilisateur "root", puis "Applications".
+On obtient alors la liste de tous les modules disponibles/activés.
+
+## Modules selectionnés : 
+
+Dans "fichier", nous avons choisi d'installer :
+
+* File access control -> Permet de contrôler les droits d'accès à un document
+* PDF viewer -> Permet de visionner les documents PDF
+
+Dans "multimédia" : 
+
+* Talk -> Permet d'utiliser un chat textuel, audio & vidéo
+
+Dans "Bureautique & texte" : 
+
+* Calendar -> Permet d'utiliser un calendrier personnel ou d'intégrer un calendrier
+* Notes -> Permet de créer des notes, le Markdown est disponible
+
+Nous avions également des modules intégrés à l'installation (de Nextcloud) : 
+
+* Fichier -> Stockage et partage de fichiers = Drive
+* Activité -> Logs du compte 
+* Galerie -> Stockage et partage de photos
