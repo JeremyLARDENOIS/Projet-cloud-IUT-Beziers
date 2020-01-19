@@ -8,6 +8,9 @@
 - [Installation de la base de données NoSQL MongoDB](#mongodb)
 - [Installation du serveur Nextcloud](#installnextcloud)
 -- [Installation de Nextcloud rapide](#fastinstallnextcloud)
+- [Modules](#modules)
+-- [Installation des modules](#installmodules)
+-- [Modules selectionnés](#modulesselected)
 
 <span id=sources></span> 
 ## Sources
@@ -110,11 +113,11 @@ mv /var/www/html/nextcloud/* /var/www/html
 --->
 La page d'installation indique qu'il manque des modules PHP. Connectez vous en SSH  avec les  droits d'administration  sur votre serveur, puis installez ces paquets ip :
 ```bash=
-apt install php-zip php-dom php-curl php-gd php-mbstring php-sqlite3
+apt install php-zip php-dom php-curl php-gd php-mbstring php-sqlite3 php-ldap
 ```
 Les installer ne suffit pas. Il faut les activer, et redémarrer le serveur web pour que ceux-ci soient pris en compte :
 ```bash=
-phpenmod zip dom curl gd mbstring sqlite3
+phpenmod zip dom curl gd mbstring sqlite3 ldap
 ```
 puis on redémarre le serveur Apache :
 ```bash=
@@ -125,7 +128,7 @@ service apache2 restart
 Pour aller plus vite, on peut lancer la suite de commande suivante :
 ```bash
 sudo apt install unzip sqlite3 apache2 php php-zip php-dom php-curl php-gd php-mbstring php-sqlite3 php-ldap
-phpenmod zip dom curl gd mbstring sqlite3
+phpenmod zip dom curl gd mbstring sqlite3 ldap
 wget https://download.nextcloud.com/server/releases/nextcloud-17.0.2.zip
 unzip nextcloud-17.0.2.zip -d /var/www/html 
 chown -R www-data:www-data /var/www/html/nextcloud
@@ -133,3 +136,37 @@ service apache2 restart
 ```
 
 pensez à changer l'ip dans le fichier /var/www/html/nextcloud/config/config.php
+
+
+<span id=modules></span> 
+# Modules
+
+<span id=installmodules></span> 
+## Installation des modules : 
+
+Lorsque l'on est sur la page d'acceuil de Nextcloud, il faut cliquer sur l'icône de l'utilisateur "root", puis "Applications".
+On obtient alors la liste de tous les modules disponibles/activés.
+
+<span id=modulesselected></span> 
+## Modules selectionnés : 
+
+Dans "fichier", nous avons choisi d'installer :
+
+* File access control -> Permet de contrôler les droits d'accès à un document
+* PDF viewer -> Permet de visionner les documents PDF
+
+Dans "multimédia" :
+
+* Talk -> Permet d'utiliser un chat textuel, audio & vidéo
+
+Dans "Bureautique & texte" :
+
+* Calendar -> Permet d'utiliser un calendrier personnel ou d'intégrer un calendrier
+* Notes -> Permet de créer des notes, le Markdown est disponible
+
+Nous avions également des modules intégrés à l'installation (de Nextcloud) :
+
+* Fichier -> Stockage et partage de fichiers = Drive
+* Activité -> Logs du compte
+* Galerie -> Stockage et partage de photos
+
