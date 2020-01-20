@@ -4,13 +4,15 @@
 - [Sources](#sources)
 - [Pré-requis (connaissance)](#prerequis)
 - [Installation de la base de données embarqué sqlite3](#installsqlite3)
--- [Utiliser sqlite3 avec python3](#usesqlite3)
+- - [Utiliser sqlite3 avec python3](#usesqlite3)
 - [Installation de la base de données NoSQL MongoDB](#mongodb)
 - [Installation du serveur Nextcloud](#installnextcloud)
--- [Installation de Nextcloud rapide](#fastinstallnextcloud)
-- [Modules](#modules)
--- [Installation des modules](#installmodules)
--- [Modules selectionnés](#modulesselected)
+- - [Installation de Nextcloud rapide](#fastinstallnextcloud)
+- [Configuration graphique](#graphicalconf)
+- - [Installation des modules](#installmodules)
+- - - [Modules selectionnés](#modulesselected)
+- - [Activation du chiffrement côté serveur](#chiffrementserveur)
+- - [Personnaliser l'interface](#personnalisation)
 
 <span id=sources></span> 
 ## Sources
@@ -138,8 +140,9 @@ service apache2 restart
 pensez à changer l'ip dans le fichier /var/www/html/nextcloud/config/config.php
 
 
-<span id=modules></span> 
-# Modules
+<span id=graphicalconf></span> 
+
+# Configuration graphique
 
 <span id=installmodules></span> 
 ## Installation des modules : 
@@ -148,7 +151,7 @@ Lorsque l'on est sur la page d'acceuil de Nextcloud, il faut cliquer sur l'icôn
 On obtient alors la liste de tous les modules disponibles/activés.
 
 <span id=modulesselected></span> 
-## Modules selectionnés : 
+### Modules selectionnés : 
 
 Dans "fichier", nous avons choisi d'installer :
 
@@ -170,3 +173,22 @@ Nous avions également des modules intégrés à l'installation (de Nextcloud) :
 * Activité -> Logs du compte
 * Galerie -> Stockage et partage de photos
 
+
+<span id=chiffrementserveur></span>
+## Activation du chiffrement côté serveur : 
+
+* Aller dans les applications désactivées et activer "Default encryption module"
+* Aller dans les paramètres, administration puis sécurité et cocher "Activer le chiffrement côté serveur"
+
+
+<span id=personnalisation></span>
+## Personnaliser l'interface : 
+
+Aller dans paramètres, administration puis personnaliser l'apparence. Ici, il est possible de :
+* Changer le logo du site
+* Changer la couleur de l'interface
+* Changer le nom
+* Changer le nom du lien de la page d'accueil
+* Changer l'image de connexion
+* Changer le logo d'en-tête
+* Changer le Favicon (petit logo en haut à gauche)
