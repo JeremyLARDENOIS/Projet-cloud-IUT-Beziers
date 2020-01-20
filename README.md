@@ -4,15 +4,15 @@
 - [Sources](#sources)
 - [Pré-requis (connaissance)](#prerequis)
 - [Installation de la base de données embarqué sqlite3](#installsqlite3)
-- - [Utiliser sqlite3 avec python3](#usesqlite3)
+  - [Utiliser sqlite3 avec python3](#usesqlite3)
 - [Installation de la base de données NoSQL MongoDB](#mongodb)
 - [Installation du serveur Nextcloud](#installnextcloud)
-- - [Installation de Nextcloud rapide](#fastinstallnextcloud)
+  - [Installation de Nextcloud rapide](#fastinstallnextcloud)
 - [Configuration graphique](#graphicalconf)
-- - [Installation des modules](#installmodules)
-- - - [Modules selectionnés](#modulesselected)
-- - [Activation du chiffrement côté serveur](#chiffrementserveur)
-- - [Personnaliser l'interface](#personnalisation)
+  - [Installation des modules](#installmodules)
+    - [Modules selectionnés](#modulesselected)
+  - [Activation du chiffrement côté serveur](#chiffrementserveur)
+  - [Personnaliser l'interface](#personnalisation)
 
 <span id=sources></span> 
 ## Sources
