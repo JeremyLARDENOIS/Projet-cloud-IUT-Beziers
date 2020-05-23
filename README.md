@@ -13,7 +13,7 @@
     - [Modules selectionnés](#modulesselected)
   - [Activation du chiffrement côté serveur](#chiffrementserveur)
   - [Personnaliser l'interface](#personnalisation)
-
+- [Développement d'un Plug-in test](#plugin)
 <span id=sources></span> 
 ## Sources
 <a href="https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https" target="_blank"> https://wiki.debianfr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https </a>
@@ -192,3 +192,32 @@ Aller dans paramètres, administration puis personnaliser l'apparence. Ici, il e
 * Changer l'image de connexion
 * Changer le logo d'en-tête
 * Changer le Favicon (petit logo en haut à gauche)
+
+<span id=plugin></span>
+## Développement d'un Plug-in test
+La documentation suivie se trouve [ici](https://docs.nextcloud.com/server/stable/developer_manual/app/intro.html)
+
+Pour commencer, il faut créer un squelette de la nouvelle application que nous allons développés. Pour cela il suffit de se rendre [ici](https://apps.nextcloud.com/developer/apps/generate), de remplir les différents champs et de télécharger le squelette de l'application app.tar.gz .  Il faudra copiez celui-ci sur le serveur et la décompresser avec la commande : 
+ ```bash
+tar xzvf app.tar.gz
+```
+Ici, le plugin s'appellera apptest 
+On met ensuite en place l'environnement de dévellopement de nextcloud :
+```bash
+git clone https://github.com/nextcloud/server.git --branch stable17
+cd server
+git submodule update --init
+```
+Ensuite activer le mode débogage en créant le fichier ```/var/www/html/nextcloud/apps/apptest/server/config/config.php```, et y mettant la configuration ci-dessous :
+```php
+<?php
+$CONFIG = array (
+	'debug' => true,
+);
+```
+On peut ensuite créer l'instance test avec la commande
+```bash
+cd  /var/www/html/nextcloud && php -S nextcloud 10.18.122.39:8080
+```
+Ne pas oublier de vérifier avant votre adresse ip et l'emplacement racine du serveur Nextcloud.
+Penser a ouvrir un deuxième terminal pour pouvoir voir les log en même temps que le développement.
