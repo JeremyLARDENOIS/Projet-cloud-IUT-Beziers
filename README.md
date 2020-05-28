@@ -14,6 +14,7 @@
   - [Activation du chiffrement côté serveur](#chiffrementserveur)
   - [Personnaliser l'interface](#personnalisation)
 - [Développement d'un Plug-in test](#plugin)
+	- [Installation d'un Plug-in test](#plugin-install)
 <span id=sources></span> 
 ## Sources
 <a href="https://wiki.debian-fr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https" target="_blank"> https://wiki.debianfr.xyz/Nextcloud_sur_une_Debian_9_Stretch_Apache2_%2B_SQLite_MariaDB_MySQL_%2B_certificat_SSL_et_https </a>
@@ -195,6 +196,8 @@ Aller dans paramètres, administration puis personnaliser l'apparence. Ici, il e
 
 <span id=plugin></span>
 ## Développement d'un Plug-in test
+<span id=plugin-install></span>
+### Installation
 La documentation suivie se trouve [ici](https://docs.nextcloud.com/server/stable/developer_manual/app/intro.html)
 
 Pour commencer, il faut créer un squelette de la nouvelle application que nous allons développés. Pour cela il suffit de se rendre [ici](https://apps.nextcloud.com/developer/apps/generate), de remplir les différents champs et de télécharger le squelette de l'application app.tar.gz .  Il faudra copiez celui-ci sur le serveur et la décompresser avec la commande : 
@@ -219,5 +222,8 @@ On peut ensuite créer l'instance test avec la commande
 ```bash
 cd  /var/www/html/nextcloud && php -S nextcloud 10.18.122.39:8080
 ```
-Ne pas oublier de vérifier avant votre adresse ip et l'emplacement racine du serveur Nextcloud.
+L'adresse 10.18.122.39 correspond a l'adresse ip locale routée de la machine .
+Ne pas oublier de vérifier avant votre adresse ip et l'emplacement racine du serveur Nextcloud .
 Penser a ouvrir un deuxième terminal pour pouvoir voir les log en même temps que le développement.
+
+Il suffit désormais simplement d'activer l'application. Pour cela, on se rend sur [http://51.15.37.21:8080/index.php/settings/apps](http://51.15.37.21:8080/index.php/settings/apps), on recherche le nom de l'application, on l'installe, et on l'active. On a donc notre application qui fonctionne avec un nouvelle onglet sur le haut qui porte le nom de l'application et un message "Hello World" !
