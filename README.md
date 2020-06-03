@@ -220,7 +220,7 @@ $CONFIG = array (
 ```
 On peut ensuite créer l'instance test avec la commande
 ```bash
-cd  /var/www/html/nextcloud && php -S nextcloud 10.18.122.39:8080
+cd  /var/www/html/nextcloud && php -S 10.18.122.39:8080
 ```
 L'adresse 10.18.122.39 correspond a l'adresse ip locale routée de la machine .
 Ne pas oublier de vérifier avant votre adresse ip et l'emplacement racine du serveur Nextcloud .
