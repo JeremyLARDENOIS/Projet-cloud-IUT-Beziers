@@ -8,7 +8,7 @@ Les présentes conditions générales d'utilisation (dites « **CGU** ») ont po
 
 Les présentes CGU sont accessibles sur le site à la rubrique « **CGU** ».
 
-Toute utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’Utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case stipulant : « *Je reconnais avoir lu et compris les CGU et je les accepte* ».
+Toute utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’Utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case stipulant : « *Je reconnais avoir lu et accepté les conditions d'utilisation ci-dessus* ».
 
 En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à l'accès des services proposés par le site.
 
